@@ -19,6 +19,7 @@
 
       .container-carousel {
         overflow-x: scroll;
+        scroll-behavior: smooth;
       }
     </style>
 
@@ -95,51 +96,72 @@
   <div class="px-12 py-9">
     <p class="py-4 font-semibold">My List</p>
 
+    <div class="left-arrow absolute left-0">
+      <button class="p-4 h-32 outline-none"><i class="fas fa-angle-left"></i></button>
+    </div>
+
     <div class="flex items-center relative">
-
-      <div class="absolute left-0">
-        <button class="p-4 h-32 outline-none"><i class="fas fa-angle-left"></i></button>
-      </div>
-
       <div class="container-carousel">
         <div class="carousel">
           <div class="pics">
             <a href="#">
               <img class="rounded" src="./images/breaking-bad.png" alt="Breaking Bad">
             </a>
+          </div>
+          <div class="pics">
             <a href="#">
               <img class="rounded" src="./images/cable-girls.png" alt="Breaking Bad">
             </a>
+          </div>
+          <div class="pics">
             <a href="#">
               <img class="rounded" src="./images/marco-polo.png" alt="Breaking Bad">
             </a>
+          </div>
+          <div class="pics">
             <a href="#">
               <img class="rounded" src="./images/money-heist.png" alt="Breaking Bad">
             </a>
+          </div>
+          <div class="pics">
             <a href="#">
               <img class="rounded" src="./images/mononoke.png" alt="Breaking Bad">
             </a>
+          </div>
+          <div class="pics">
             <a href="#">
               <img class="rounded" src="./images/peaky-blinders.png" alt="Breaking Bad">
             </a>
+          </div>
+          <div class="pics">
             <a href="#">
               <img class="rounded" src="./images/selfmade.png" alt="Breaking Bad">
             </a>
+          </div>
+          <div class="pics">
             <a href="#">
               <img class="rounded" src="./images/start-up.png" alt="Breaking Bad">
             </a>
+          </div>
+          <div class="pics">
+
             <a href="#">
               <img class="rounded" src="./images/stranger-things.png" alt="Breaking Bad">
             </a>
+          </div>
+          <div class="pics">
             <a href="#">
               <img class="rounded" src="./images/unorthodox.png" alt="Breaking Bad">
             </a>
           </div>
         </div>
       </div>
-
+    </div>
+    <div class="right-arrow absolute right-0">
+      <button class="p-4 h-32 outline-none"><i class="fas fa-angle-right"></i></button>
     </div>
   </div>
+
   <!-- TV Shows -->
   <div class="px-12 py-9">
     <p class="py-4 font-semibold">TV Shows</p>
@@ -216,6 +238,18 @@
 </section>
 
 <script type="text/javascript">
+  const carousel = document.querySelector(".container-carousel")
+
+  const left = document.querySelector(".left-arrow")
+  const right = document.querySelector(".right-arrow")
+
+  right.addEventListener("click", () => {
+    carousel.scrollLeft += carousel.offsetWidth;
+  });
+
+  left.addEventListener("click", () => {
+    carousel.scrollLeft -= carousel.offsetWidth;
+  });
 
 </script>
 
