@@ -1,0 +1,135 @@
+.pics {
+  min-width: 20%;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .pics {
+    min-width: 25%;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 768px) {
+  .pics {
+    min-width: 40%;
+  }
+}
+
+/* carousel */
+.container-carousel .carousel {
+  display: flex;
+  align-items: center;
+}
+
+.container-carousel {
+  overflow-x: scroll;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+/* transforms */
+.container-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+/* container box */
+.container {
+  position: relative;
+  min-width: 20%;
+  display: flex;
+}
+
+.container .box {
+  position: relative;
+  width: 275px;
+  height:  275px;
+  overflow: hidden;
+  transition: 0.5s; /* transition duration-500 ease-in-out */
+}
+
+.container .box:hover {
+  z-index: 20;
+  transform: scale(1.25);
+  height: 275px;
+  background-color: rgb(27, 28, 37);
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.8);
+}
+
+/* container  imgbox */
+.container .box .imgBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+}
+
+.container .box .imgBox:before {
+  z-index: 20;
+  transition: 0.5s;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: rgb(27, 28, 37);
+  opacity: 0;
+}
+
+.container .box:hover .imgBox:before {
+  opacity: 1;
+}
+
+/* container content p */
+.container .box .content {
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  padding: 20px;
+}
+
+.container .box .content p {
+  font-size: 12px;
+  transform: translateY(200px);
+  transition: 0.5s;
+}
+
+.container .box:hover .content p {
+  font-size: 12px;
+  transform: translateY(0);
+  transition-delay:(0.7s);
+  /* padding-top: 10px; */
+}
+
+.pics .boxa .contenta {
+  transform: translateY(200px);
+  transition: 0.5s;
+}
+
+
+.pics .boxa:hover .contenta {
+  /* font-size: 12px; */
+  transform: translateY(0);
+  transition-delay:(0.7s);
+  /* padding-top: 10px; */
+}
+
+
+.container .box .content .border-red {
+  font-size: 12px;
+  transform: translateY(200px);
+  transition: 0.5s;
+}
+
+.container .box:hover .content .border-red {
+  font-size: 12px;
+  transform: translateY(0);
+  transition-delay:(0.7s);
+}
