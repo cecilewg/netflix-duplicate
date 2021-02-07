@@ -2,13 +2,13 @@
   min-width: 20%;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 800px) and (max-width: 1200px) {
   .pics {
     min-width: 25%;
   }
 }
 
-@media screen and (min-width: 375px) and (max-width: 768px) {
+@media screen and (min-width: 375px) and (max-width: 800px) {
   .pics {
     min-width: 40%;
   }
@@ -24,42 +24,47 @@
   overflow-x: scroll;
   overflow: hidden;
   scroll-behavior: smooth;
+  /* z-index: 0; */
+
 }
 
 /* transforms */
-.container-display {
+/* .container-display {
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
   margin-top: 10px;
-}
+} */
 
 /* container box */
-.container {
+/* .container {
   position: relative;
   min-width: 20%;
   display: flex;
-}
+} */
 
-.container .box {
-  position: relative;
-  width: 275px;
-  height:  275px;
+/* ------------------------------------------------------------------------------------------------ BON CSS */
+
+.pics .box {
+  /* position: relative; */
+  /* height:  155px; */
   overflow: hidden;
-  transition: 0.5s; /* transition duration-500 ease-in-out */
+  transition: 1s;
 }
 
-.container .box:hover {
+.pics .box:hover {
   z-index: 20;
-  transform: scale(1.25);
-  height: 275px;
-  background-color: rgb(27, 28, 37);
-  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.8);
+  /* transform: scale(1.1); */
+  height: 310px;
+  /* overflow: visible; */
+
+  /* background-color: rgb(27, 28, 37); */
+
 }
 
 /* container  imgbox */
-.container .box .imgBox {
+/* .container .box .imgBox {
   position: absolute;
   top: 0;
   left: 0;
@@ -80,10 +85,10 @@
 
 .container .box:hover .imgBox:before {
   opacity: 1;
-}
+} */
 
 /* container content p */
-.container .box .content {
+/* .container .box .content {
   display: flex;
   align-items: flex-end;
   position: absolute;
@@ -105,24 +110,23 @@
   font-size: 12px;
   transform: translateY(0);
   transition-delay:(0.7s);
-  /* padding-top: 10px; */
 }
 
 .pics .boxa .contenta {
   transform: translateY(200px);
   transition: 0.5s;
-}
+} */
 
 
-.pics .boxa:hover .contenta {
-  /* font-size: 12px; */
+/* .pics .box:hover .content {
   transform: translateY(0);
   transition-delay:(0.7s);
-  /* padding-top: 10px; */
-}
+} */
 
 
-.container .box .content .border-red {
+
+
+/* .container .box .content .border-red {
   font-size: 12px;
   transform: translateY(200px);
   transition: 0.5s;
@@ -132,4 +136,4 @@
   font-size: 12px;
   transform: translateY(0);
   transition-delay:(0.7s);
-}
+} */
